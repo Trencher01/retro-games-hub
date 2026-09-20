@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Arcade Hub</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_with_cache_bust('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>🕹️ RETRO GAME HUB 🕹️</h1>
+      <p>Choose a game and beat the high score!</p>
+    </header>
+
+    <main class="container">
+      <!-- Arcade Cabinet for Snake -->
+      <div class="arcade-cabinet">
+        <h2>🟩 RETRO SNAKE 🟩</h2>
+        <div class="score-board">Score: <span id="score">0</span></div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <p class="controls">Use arrow keys or WASD to move!</p>
+      </div>
+    </main>
+
+    <script src="{{ url_with_cache_bust('static', filename='js/snake.js') }}"></script>
+  </body>
+</html>
